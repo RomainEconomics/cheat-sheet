@@ -1,0 +1,20 @@
+# Create Tables in PSQL
+
+```sql
+CREATE TABLE users(
+	id UUID PRIMARY KEY,
+	created_at TIMESTAMP NOT NULL,
+	updated_at TIMESTAMP NOT NULL,
+	name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE feeds(
+	id UUID PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	url VARCHAR(255) UNIQUE,
+	created_at TIMESTAMP NOT NULL,
+	updated_at TIMESTAMP NOT NULL,
+	user_id UUID,
+	FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
