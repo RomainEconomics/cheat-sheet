@@ -1,6 +1,7 @@
 User : In lua, how to check if a key exist in a table ?
 
-1 Using the nil check: This is the most straightforward method. If a key doesn't exist, accessing it will return nil.
+1 Using the nil check: This is the most straightforward method. If a key doesn't
+exist, accessing it will return nil.
 
 ```lua
 local myTable = {a = 1, b = 2}
